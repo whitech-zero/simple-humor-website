@@ -12,7 +12,6 @@
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-LS475QZ38D');
         </script>
     </head>
@@ -26,14 +25,16 @@
         </div>
         
         <script>
-            let startTime = Date.now();
+            var startTime = new Date().getTime();
 
             window.addEventListener('beforeunload', function() {
-                const elapsedTime = Math.round((Date.now() - startTime) / 1000);
+                var endTime = new Date().getTime();
+                var timeSpent = Math.floor((endTime - startTime) / 1000);
+
                 gtag('event', 'time_on_page', {
                     'event_category': 'engagement',
-                    'event_label': 'total_time',
-                    'value': elapsedTime
+                    'event_label': 'page_time_spent',
+                    'value': timeSpent  // 페이지 체류 시간 (초 단위)
                 });
             });
             
