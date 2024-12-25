@@ -26,6 +26,17 @@
         </div>
         
         <script>
+            let startTime = Date.now();
+
+            window.addEventListener('beforeunload', function() {
+                const elapsedTime = Math.round((Date.now() - startTime) / 1000);
+                gtag('event', 'time_on_page', {
+                    'event_category': 'engagement',
+                    'event_label': 'total_time',
+                    'value': elapsedTime
+                });
+            });
+            
             document.getElementById('goodButton').addEventListener('click', function() {
                 gtag('event', 'click', {
                     'event_category': 'button',
