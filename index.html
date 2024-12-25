@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>개발자 유머</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LS475QZ38D"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LS475QZ38D');
+        </script>
+    </head>
+    <body>
+        <div class="background">
+            <h1>개발자 유머</h1>
+            <img src="Programmer_Humor.jpg">
+            <br>
+            <button class="bad" id="badButton">👎</button>
+            <button class="good" id="goodButton">👍</button>
+        </div>
+        
+        <script>
+            document.getElementById('goodButton').addEventListener('click', function() {
+                gtag('event', 'click', {
+                    'event_category': 'button',
+                    'event_label': 'goodButton',
+                    'value': 1
+                });
+            });
+
+            document.getElementById('badButton').addEventListener('click', function() {
+                gtag('event', 'click', {
+                    'event_category': 'button',
+                    'event_label': 'badButton',
+                    'value': 1
+                });
+            });
+        </script>
+    </body>
+</html>

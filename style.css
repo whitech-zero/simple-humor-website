@@ -1,0 +1,30 @@
+.background {
+    text-align: center;
+    background-color: white;
+    padding: 4vh;
+}
+
+button {
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 10px;
+    margin: 1vh;
+}
+
+#goodButton {
+    background-color: green;
+}
+
+#goodButton:hover {
+    background-color: darkgreen;
+}
+
+#badButton {
+    background-color: red;
+}
+
+#badButton:hover {
+    background-color: darkred;
+}
